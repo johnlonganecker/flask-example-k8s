@@ -17,3 +17,5 @@ spec:
       containers:
       - image: johnlonganecker/flask-example-for-argocd
         name: flask-example-for-argocd
+        ports:
+        - containerPort: 5000
