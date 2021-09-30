@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: flask-example
+spec:
+  selector:
+    app: flask-example
+  ports:
+    - protocol: TCP
+      port: 8000
+      targetPort: 5000

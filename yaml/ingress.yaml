@@ -1,0 +1,15 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: flask-example-ingres
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  rules:
+  - host: flask-app
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: flask-example
+          servicePort: 8000
